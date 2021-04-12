@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VirtualShowroomUI</title>
+<style id="applicationStylesheet" type="text/css">
+	.mediaViewInfo {
+		--web-view-name: VirtualShowroom-Home;
+		--web-view-id: VirtualShowroom_Home;
+		--web-scale-on-resize: true;
+		--web-enable-deep-linking: true;
+	}
+	:root {
+		--web-view-ids: VirtualShowroom_Home;
+	}
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		border: none;
+	}
+	#VirtualShowroom_Home {
+		position: absolute;
+		width: 1920px;
+		height: 1080px;
+		background-color: rgba(255,255,255,1);
+		overflow: hidden;
+		--web-view-name: VirtualShowroom-Home;
+		--web-view-id: VirtualShowroom_Home;
+		--web-scale-on-resize: true;
+		--web-enable-deep-linking: true;
+	}
+	.BG {
+		position: absolute;
+		overflow: visible;
+		width: 1920px;
+		height: 1080px;
+		left: 0px;
+		top: 0px;
+	}
+	#Hatil_Logo {
+		position: absolute;
+		width: 254px;
+		height: 229px;
+		left: 76px;
+		top: -7px;
+		overflow: visible;
+	}
+	#VIRTUAL_SHOWROOM {
+		display: none;
+		position: absolute;
+		left: 695px;
+		top: 74px;
+		overflow: visible;
+		width: 531px;
+		white-space: nowrap;
+		text-align: center;
+		font-family: Segoe UI;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 30px;
+		color: rgba(112,112,112,1);
+	}
+	#CountryToggle {
+		position: absolute;
+		width: 171px;
+		height: 67px;
+		left: 1650px;
+		top: 74px;
+		overflow: visible;
+	}
+	.Rectangle_1 {
+		position: absolute;
+		overflow: visible;
+		width: 171px;
+		height: 67px;
+		left: 0px;
+		top: 0px;
+	}
+	.Rectangle_2 {
+		position: absolute;
+		overflow: visible;
+		width: 86px;
+		height: 67px;
+		left: 0px;
+		top: 0px;
+	}
+	#BD {
+		position: absolute;
+		left: 24px;
+		top: 14px;
+		overflow: visible;
+		width: 39px;
+		white-space: nowrap;
+		text-align: center;
+		font-family: Segoe UI;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 30px;
+		color: rgba(255,255,255,1);
+	}
+	#IND {
+		position: absolute;
+		left: 102px;
+		top: 14px;
+		overflow: visible;
+		width: 53px;
+		white-space: nowrap;
+		text-align: center;
+		font-family: Segoe UI;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 30px;
+		color: rgba(0,0,0,1);
+	}
+	.Line_1 {
+		overflow: visible;
+		position: absolute;
+		width: 286px;
+		height: 3px;
+		left: 817.5px;
+		top: 175.5px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#BodyContent {
+		position: absolute;
+		width: 1719px;
+		height: 722px;
+		left: 101px;
+		top: 236px;
+		overflow: visible;
+	}
+	.SelectionHolder {
+		position: absolute;
+		overflow: visible;
+		width: 1716px;
+		height: 722px;
+		left: 0px;
+		top: 0px;
+	}
+	#Element01 {
+		position: absolute;
+		width: 430px;
+		height: 722px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Holder01 {
+		position: absolute;
+		width: 429px;
+		height: 722px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#BlackBG {
+		opacity: 0.5;
+	}
+	.BlackBG {
+		overflow: visible;
+		position: absolute;
+		width: 430px;
+		height: 722px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#RedBG {
+		opacity: 0;
+	}
+	.RedBG {
+		position: absolute;
+		overflow: visible;
+		width: 347px;
+		height: 290px;
+		left: 0px;
+		top: 402px;
+	}
+	#LIVING_ROOM_EXPERIENCE {
+		position: absolute;
+		left: 42px;
+		top: 443px;
+		overflow: visible;
+		width: 236px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Segoe UI;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 35px;
+		color: rgba(255,255,255,1);
+	}
+	.Line_2 {
+		overflow: visible;
+		position: absolute;
+		width: 235px;
+		height: 3px;
+		left: 42.5px;
+		top: 552.5px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Button {
+		opacity: 0;
+		position: absolute;
+		width: 172px;
+		height: 60px;
+		left: 43px;
+		top: 586px;
+		overflow: visible;
+	}
+	.ButtonBG {
+		position: absolute;
+		overflow: visible;
+		width: 172px;
+		height: 60px;
+		left: 0px;
+		top: 0px;
+	}
+	#EXPLORE {
+		position: absolute;
+		left: 33px;
+		top: 14px;
+		overflow: visible;
+		width: 107px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Segoe UI;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 25px;
+		color: rgba(255,0,0,1);
+	}
+	#Element02 {
+		position: absolute;
+		width: 430px;
+		height: 722px;
+		left: 429px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Holder01_ {
+		position: absolute;
+		width: 429px;
+		height: 722px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#BlackBG_ {
+		opacity: 0.5;
+	}
+	.BlackBG_ {
+		position: absolute;
+		overflow: visible;
+		width: 430px;
+		height: 722px;
+		left: 0px;
+		top: 0px;
+	}
+	#RedBG_ {
+		opacity: 0;
+	}
+	.RedBG_ {
+		position: absolute;
+		overflow: visible;
+		width: 347px;
+		height: 290px;
+		left: 0px;
+		top: 402px;
+	}
+	#BED_DINING_EXPERIENCE {
+		position: absolute;
+		left: 42px;
+		top: 443px;
+		overflow: visible;
+		width: 210px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Segoe UI;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 35px;
+		color: rgba(255,255,255,1);
+	}
+	.Line_2_ {
+		overflow: visible;
+		position: absolute;
+		width: 235px;
+		height: 3px;
+		left: 42.5px;
+		top: 552.5px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Button_ {
+		opacity: 0;
+		position: absolute;
+		width: 172px;
+		height: 60px;
+		left: 43px;
+		top: 586px;
+		overflow: visible;
+	}
+	.ButtonBG_ {
+		position: absolute;
+		overflow: visible;
+		width: 172px;
+		height: 60px;
+		left: 0px;
+		top: 0px;
+	}
+	#EXPLORE_ {
+		position: absolute;
+		left: 33px;
+		top: 14px;
+		overflow: visible;
+		width: 107px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Segoe UI;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 25px;
+		color: rgba(255,0,0,1);
+	}
+	#Element03 {
+		position: absolute;
+		width: 430px;
+		height: 722px;
+		left: 859px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Holder01_ba {
+		position: absolute;
+		width: 429px;
+		height: 722px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#BlackBG_bb {
+		opacity: 0.5;
+	}
+	.BlackBG_bb {
+		position: absolute;
+		overflow: visible;
+		width: 430px;
+		height: 722px;
+		left: 0px;
+		top: 0px;
+	}
+	#RedBG_bc {
+		opacity: 0;
+	}
+	.RedBG_bc {
+		position: absolute;
+		overflow: visible;
+		width: 347px;
+		height: 290px;
+		left: 0px;
+		top: 402px;
+	}
+	#OFFICE_EXPERIENCE {
+		position: absolute;
+		left: 42px;
+		top: 443px;
+		overflow: visible;
+		width: 204px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Segoe UI;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 35px;
+		color: rgba(255,255,255,1);
+	}
+	.Line_2_be {
+		overflow: visible;
+		position: absolute;
+		width: 235px;
+		height: 3px;
+		left: 42.5px;
+		top: 552.5px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Button_bf {
+		opacity: 0;
+		position: absolute;
+		width: 172px;
+		height: 60px;
+		left: 43px;
+		top: 586px;
+		overflow: visible;
+	}
+	.ButtonBG_bg {
+		position: absolute;
+		overflow: visible;
+		width: 172px;
+		height: 60px;
+		left: 0px;
+		top: 0px;
+	}
+	#EXPLORE_bh {
+		position: absolute;
+		left: 33px;
+		top: 14px;
+		overflow: visible;
+		width: 107px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Segoe UI;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 25px;
+		color: rgba(255,0,0,1);
+	}
+	#Element04 {
+		position: absolute;
+		width: 430px;
+		height: 722px;
+		left: 1289px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Holder01_bj {
+		position: absolute;
+		width: 429px;
+		height: 722px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#BlackBG_bk {
+		opacity: 0.5;
+	}
+	.BlackBG_bk {
+		position: absolute;
+		overflow: visible;
+		width: 430px;
+		height: 722px;
+		left: 0px;
+		top: 0px;
+	}
+	#RedBG_bl {
+		opacity: 0;
+	}
+	.RedBG_bl {
+		position: absolute;
+		overflow: visible;
+		width: 347px;
+		height: 290px;
+		left: 0px;
+		top: 402px;
+	}
+	#INSTITUTIONAL_EXPERIENCE {
+		position: absolute;
+		left: 42px;
+		top: 443px;
+		overflow: visible;
+		width: 265px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Segoe UI;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 35px;
+		color: rgba(255,255,255,1);
+	}
+	.Line_2_bn {
+		overflow: visible;
+		position: absolute;
+		width: 235px;
+		height: 3px;
+		left: 42.5px;
+		top: 552.5px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Button_bo {
+		opacity: 0;
+		position: absolute;
+		width: 172px;
+		height: 60px;
+		left: 43px;
+		top: 586px;
+		overflow: visible;
+	}
+	.ButtonBG_bp {
+		position: absolute;
+		overflow: visible;
+		width: 172px;
+		height: 60px;
+		left: 0px;
+		top: 0px;
+	}
+	#EXPLORE_bq {
+		position: absolute;
+		left: 33px;
+		top: 14px;
+		overflow: visible;
+		width: 107px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Segoe UI;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 25px;
+		color: rgba(255,0,0,1);
+	}
+	#PngItem {
+		opacity: 0.4;
+		position: absolute;
+		width: 504px;
+		height: 64px;
+		left: 1317px;
+		top: 992px;
+		overflow: visible;
+	}
+	#VirtualShowroomLogo {
+		position: absolute;
+		width: 571px;
+		height: 85px;
+		left: 675px;
+		top: 65px;
+		overflow: visible;
+	}
+	#Hatil_Virtual_Showroom__All_Ri {
+		position: absolute;
+		left: 101px;
+		top: 1011px;
+		overflow: visible;
+		width: 457px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Segoe UI;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 20px;
+		color: rgba(162,162,162,1);
+	}
+</style>
+<script id="applicationScript" type="text/javascript" src="interaction.js"></script>
+</head>
+<body>
+<div id="VirtualShowroom_Home">
+	<svg class="BG">
+		<rect fill="rgba(245,245,245,1)" id="BG" rx="0" ry="0" x="0" y="0" width="1920" height="1080">
+		</rect>
+	</svg>
+	<img id="Hatil_Logo" src="Hatil_Logo.png" srcset="Hatil_Logo.png 1x, Hatil_Logo@2x.png 2x">
+	<div id="VIRTUAL_SHOWROOM">
+		<span></span><span style="font-style:normal;font-weight:bold;font-size:50px;">VIRTUAL SHOWROOM</span>
+	</div>
+	<div id="CountryToggle" class="CountryToggle">
+		<svg class="Rectangle_1">
+			<rect fill="rgba(255,255,255,1)" id="Rectangle_1" rx="0" ry="0" x="0" y="0" width="171" height="67">
+			</rect>
+		</svg>
+		<svg class="Rectangle_2">
+			<rect fill="rgba(252,0,0,1)" id="Rectangle_2" rx="0" ry="0" x="0" y="0" width="86" height="67">
+			</rect>
+		</svg>
+		<div id="BD">
+			<span>BD</span>
+		</div>
+		<div id="IND">
+			<span>IND</span>
+		</div>
+	</div>
+	<svg class="Line_1" viewBox="0 0 286 3">
+		<path fill="transparent" stroke="rgba(255,0,0,1)" stroke-width="3px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Line_1" d="M 0 0 L 286 0">
+		</path>
+	</svg>
+	<div id="BodyContent">
+		<svg class="SelectionHolder">
+			<rect fill="rgba(255,255,255,1)" id="SelectionHolder" rx="0" ry="0" x="0" y="0" width="1716" height="722">
+			</rect>
+		</svg>
+		<div id="Element01" class="Element01">
+			<img id="Holder01" src="Holder01.png" srcset="Holder01.png 1x, Holder01@2x.png 2x">
+			<svg class="BlackBG" viewBox="0 0 430 722">
+				<path fill="rgba(0,0,0,1)" id="BlackBG" d="M 0 0 L 430 0 L 430 722 L 0 722 L 0 0 Z">
+				</path>
+			</svg>
+			<svg class="RedBG">
+				<rect fill="rgba(190,0,0,1)" id="RedBG" rx="0" ry="0" x="0" y="0" width="347" height="290">
+				</rect>
+			</svg>
+			<div id="LIVING_ROOM_EXPERIENCE">
+				<span>LIVING ROOM<br/>EXPERIENCE</span>
+			</div>
+			<svg class="Line_2" viewBox="0 0 235 3">
+				<path fill="transparent" stroke="rgba(255,0,0,1)" stroke-width="3px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Line_2" d="M 0 0 L 235 0">
+				</path>
+			</svg>
+			<div id="Button">
+				<svg class="ButtonBG">
+					<rect fill="rgba(255,255,255,1)" stroke="rgba(112,112,112,1)" stroke-width="1px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="ButtonBG" rx="0" ry="0" x="0" y="0" width="172" height="60">
+					</rect>
+				</svg>
+				<div id="EXPLORE">
+					<span>EXPLORE</span>
+				</div>
+			</div>
+		</div>
+		<div id="Element02" class="Element02">
+			<img id="Holder01_" src="Holder01_.png" srcset="Holder01_.png 1x, Holder01_@2x.png 2x">
+			<svg class="BlackBG_">
+				<rect fill="rgba(0,0,0,1)" id="BlackBG_" rx="0" ry="0" x="0" y="0" width="430" height="722">
+				</rect>
+			</svg>
+			<svg class="RedBG_">
+				<rect fill="rgba(190,0,0,1)" id="RedBG_" rx="0" ry="0" x="0" y="0" width="347" height="290">
+				</rect>
+			</svg>
+			<div id="BED_DINING_EXPERIENCE">
+				<span>BED-DINING<br/>EXPERIENCE</span>
+			</div>
+			<svg class="Line_2_" viewBox="0 0 235 3">
+				<path fill="transparent" stroke="rgba(255,0,0,1)" stroke-width="3px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Line_2_" d="M 0 0 L 235 0">
+				</path>
+			</svg>
+			<div id="Button_">
+				<svg class="ButtonBG_">
+					<rect fill="rgba(255,255,255,1)" stroke="rgba(112,112,112,1)" stroke-width="1px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="ButtonBG_" rx="0" ry="0" x="0" y="0" width="172" height="60">
+					</rect>
+				</svg>
+				<div id="EXPLORE_">
+					<span>EXPLORE</span>
+				</div>
+			</div>
+		</div>
+		<div id="Element03" class="Element03">
+			<img id="Holder01_ba" src="Holder01_ba.png" srcset="Holder01_ba.png 1x, Holder01_ba@2x.png 2x">
+			<svg class="BlackBG_bb">
+				<rect fill="rgba(0,0,0,1)" id="BlackBG_bb" rx="0" ry="0" x="0" y="0" width="430" height="722">
+				</rect>
+			</svg>
+			<svg class="RedBG_bc">
+				<rect fill="rgba(190,0,0,1)" id="RedBG_bc" rx="0" ry="0" x="0" y="0" width="347" height="290">
+				</rect>
+			</svg>
+			<div id="OFFICE_EXPERIENCE">
+				<span>OFFICE<br/>EXPERIENCE</span>
+			</div>
+			<svg class="Line_2_be" viewBox="0 0 235 3">
+				<path fill="transparent" stroke="rgba(255,0,0,1)" stroke-width="3px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Line_2_be" d="M 0 0 L 235 0">
+				</path>
+			</svg>
+			<div id="Button_bf">
+				<svg class="ButtonBG_bg">
+					<rect fill="rgba(255,255,255,1)" stroke="rgba(112,112,112,1)" stroke-width="1px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="ButtonBG_bg" rx="0" ry="0" x="0" y="0" width="172" height="60">
+					</rect>
+				</svg>
+				<div id="EXPLORE_bh">
+					<span>EXPLORE</span>
+				</div>
+			</div>
+		</div>
+		<div id="Element04" class="Element04">
+			<img id="Holder01_bj" src="Holder01_bj.png" srcset="Holder01_bj.png 1x, Holder01_bj@2x.png 2x">
+			<svg class="BlackBG_bk">
+				<rect fill="rgba(0,0,0,1)" id="BlackBG_bk" rx="0" ry="0" x="0" y="0" width="430" height="722">
+				</rect>
+			</svg>
+			<svg class="RedBG_bl">
+				<rect fill="rgba(190,0,0,1)" id="RedBG_bl" rx="0" ry="0" x="0" y="0" width="347" height="290">
+				</rect>
+			</svg>
+			<div id="INSTITUTIONAL_EXPERIENCE">
+				<span>INSTITUTIONAL<br/>EXPERIENCE</span>
+			</div>
+			<svg class="Line_2_bn" viewBox="0 0 235 3">
+				<path fill="transparent" stroke="rgba(255,0,0,1)" stroke-width="3px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Line_2_bn" d="M 0 0 L 235 0">
+				</path>
+			</svg>
+			<div id="Button_bo">
+				<svg class="ButtonBG_bp">
+					<rect fill="rgba(255,255,255,1)" stroke="rgba(112,112,112,1)" stroke-width="1px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="ButtonBG_bp" rx="0" ry="0" x="0" y="0" width="172" height="60">
+					</rect>
+				</svg>
+				<div id="EXPLORE_bq">
+					<span>EXPLORE</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<img id="PngItem" src="PngItem.png" srcset="PngItem.png 1x, PngItem@2x.png 2x">
+	<img id="VirtualShowroomLogo" src="VirtualShowroomLogo.png" srcset="VirtualShowroomLogo.png 1x, VirtualShowroomLogo@2x.png 2x">
+	<div id="Hatil_Virtual_Showroom__All_Ri">
+		<span>Hatil Virtual Showroom. All Rights Reserved @ 2021</span>
+	</div>
+</div>
+</body>
+</html>
