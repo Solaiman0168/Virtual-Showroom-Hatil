@@ -86,13 +86,16 @@
 		max-width: 25%;
 	}
 	.image-content {
-		position: relative;
+		position: relative !important;
 	}
 	.image-text {
-		position: absolute;
+		position: absolute !important;
 		top: 340px;
 		color: #ffffff;
 		left: 30px;
+	}
+	.image-text-color{
+		background-color: #FC0000;
 	}
 	.image-text > p{
 		font-size: 35px;

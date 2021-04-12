@@ -66,28 +66,52 @@
 	<div class="image-gallery-sec">
 		<div class="hover05 column row">
 			<div class="col-3">
-			  <figure class="image-content">
-				  <img src="images/Holder01.png">
-				</figure>
-			  <span>Hover</span>
+				<div class="image-content" id="image-content-1">
+					<figure>
+						<img src="images/Holder01.png">
+					</figure>
+					<div class="image-text" id="image-text-1">
+						<p>LIVING ROOM EXPERIENCE</p>
+						<hr class="image-hr">
+						<button class="explore" id="explore-1">EXPLORE</button>
+					</div>
+				</div>
 			</div>
 			<div class="col-3">
-			  <figure class="image-content">
-				  <img src="images/Holder01_.png">
-				</figure>
-			  <!-- <span>Hover</span> -->
+				<div class="image-content" id="image-content-2">
+					<figure class="image-content">
+						<img src="images/Holder01_.png">
+					  </figure>
+					  <div class="image-text" id="image-text-2">
+						<p>BED-DINING EXPERIENCE</p>
+						<hr class="image-hr">
+						<button class="explore" id="explore-2">EXPLORE</button>
+					</div>
+				</div>
 			</div>
 			<div class="col-3">
-			  <figure class="image-content">
-				  <img src="images/Holder01_ba.png">
-				</figure>
-			  <!-- <span>Hover</span> -->
+				<div class="image-content" id="image-content-3">
+					<figure class="image-content">
+						<img src="images/Holder01_ba.png">
+					  </figure>
+					  <div class="image-text" id="image-text-3">
+						  <p>OFFICE EXPERIENCE</p>
+						  <hr class="image-hr">
+						  <button class="explore" id="explore-3">EXPLORE</button>
+					  </div>
+				</div>
 			</div>
 			  <div class="col-3">
-			  <figure class="image-content">
-				  <img src="images/Holder01_bj.png">
-				</figure>
-			  <!-- <span>Hover</span> -->
+				<div class="image-content" id="image-content-4">
+					<figure class="image-content">
+						<img src="images/Holder01_bj.png">
+					  </figure>
+					  <div class="image-text" id="image-text-4">
+						<p>INSTITUTIONAL EXPERIENCE</p>
+						<hr class="image-hr">
+						<button class="explore" id="explore-4">EXPLORE</button>
+					</div>
+				</div>
 			</div>
 		  </div>
 	</div>
@@ -123,10 +147,45 @@
 	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script>
+
 		$(".button").click(function() {
 			$("div > .button").removeClass("active");
 			$(this).addClass("active");
 		});
+
+		jQuery(function ($) {
+			var $btn1 = $('#explore-1').hide()
+			var $btn2 = $('#explore-2').hide()
+			var $btn3 = $('#explore-3').hide()
+			var $btn4 = $('#explore-4').hide()
+			var showClass = "image-text-color";
+			$("#image-content-1").mouseenter(function () {
+				$btn1.show();
+				$('#image-text-1').css('background-color', 'red');
+			});
+			$("#image-content-1").mouseleave(function () {
+				$btn1.hide();
+				$('#image-text-1').css('background-color', 'inherit');
+			});
+			$("#image-content-2").mouseenter(function () {
+				$btn2.show();
+			});
+			$("#image-content-2").mouseleave(function () {
+				$btn2.hide();
+			});
+			$("#image-content-3").mouseenter(function () {
+				$btn3.show();
+			});
+			$("#image-content-3").mouseleave(function () {
+				$btn3.hide();
+			});
+			$("#image-content-4").mouseenter(function () {
+				$btn4.show();
+			});
+			$("#image-content-4").mouseleave(function () {
+				$btn4.hide();
+			});
+		})
 	</script>
 </body>
 </html>
