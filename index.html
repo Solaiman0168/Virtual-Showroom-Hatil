@@ -71,9 +71,9 @@
 						<img src="images/Holder01.png">
 					</figure>
 					<div class="image-text" id="image-text-1">
-						<p>LIVING ROOM EXPERIENCE</p>
-						<hr class="image-hr">
-						<button class="explore" id="explore-1">EXPLORE</button>
+						<p class="same-align">LIVING ROOM EXPERIENCE</p>
+						<hr class="image-hr same-align">
+						<a class="explore same-align" id="explore-1" href="#">EXPLORE</a>
 					</div>
 				</div>
 			</div>
@@ -83,9 +83,9 @@
 						<img src="images/Holder01_.png">
 					  </figure>
 					  <div class="image-text" id="image-text-2">
-						<p>BED-DINING EXPERIENCE</p>
-						<hr class="image-hr">
-						<button class="explore" id="explore-2">EXPLORE</button>
+						<p class="same-align">BED-DINING EXPERIENCE</p>
+						<hr class="image-hr same-align">
+						<a class="explore same-align" id="explore-2" href="#">EXPLORE</a>
 					</div>
 				</div>
 			</div>
@@ -95,9 +95,9 @@
 						<img src="images/Holder01_ba.png">
 					  </figure>
 					  <div class="image-text" id="image-text-3">
-						  <p>OFFICE EXPERIENCE</p>
-						  <hr class="image-hr">
-						  <button class="explore" id="explore-3">EXPLORE</button>
+						  <p class="same-align">OFFICE EXPERIENCE</p>
+						  <hr class="image-hr same-align">
+						  <a class="explore same-align" id="explore-3" href="#">EXPLORE</a>
 					  </div>
 				</div>
 			</div>
@@ -107,9 +107,9 @@
 						<img src="images/Holder01_bj.png">
 					  </figure>
 					  <div class="image-text" id="image-text-4">
-						<p>INSTITUTIONAL EXPERIENCE</p>
-						<hr class="image-hr">
-						<button class="explore" id="explore-4">EXPLORE</button>
+						<p class="same-align">INSTITUTIONAL EXPERIENCE</p>
+						<hr class="image-hr same-align">
+						<a class="explore same-align" id="explore-4" href="#">EXPLORE</a>
 					</div>
 				</div>
 			</div>
@@ -158,10 +158,9 @@
 			var $btn2 = $('#explore-2').hide()
 			var $btn3 = $('#explore-3').hide()
 			var $btn4 = $('#explore-4').hide()
-			var showClass = "image-text-color";
 			$("#image-content-1").mouseenter(function () {
 				$btn1.show();
-				$('#image-text-1').css('background-color', 'red');
+				$('#image-text-1').css({'background-color': '#FC0000', 'margin-right': '50px', 'margin-left': '-30px', 'padding-bottom': '35px'});
 			});
 			$("#image-content-1").mouseleave(function () {
 				$btn1.hide();
@@ -169,21 +168,27 @@
 			});
 			$("#image-content-2").mouseenter(function () {
 				$btn2.show();
+				$('#image-text-2').css({'background-color': '#FC0000', 'margin-right': '50px', 'margin-left': '-30px', 'padding-bottom': '35px'});
 			});
 			$("#image-content-2").mouseleave(function () {
 				$btn2.hide();
+				$('#image-text-2').css('background-color', 'inherit');
 			});
 			$("#image-content-3").mouseenter(function () {
 				$btn3.show();
+				$('#image-text-3').css({'background-color': '#FC0000', 'margin-right': '50px', 'margin-left': '-30px', 'padding-bottom': '35px'});
 			});
 			$("#image-content-3").mouseleave(function () {
 				$btn3.hide();
+				$('#image-text-3').css('background-color', 'inherit');
 			});
 			$("#image-content-4").mouseenter(function () {
 				$btn4.show();
+				$('#image-text-4').css({'background-color': '#FC0000', 'margin-right': '50px', 'margin-left': '-30px', 'padding-bottom': '35px'});
 			});
 			$("#image-content-4").mouseleave(function () {
 				$btn4.hide();
+				$('#image-text-4').css('background-color', 'inherit');
 			});
 		})
 	</script>
