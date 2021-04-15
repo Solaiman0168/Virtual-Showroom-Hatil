@@ -185,16 +185,12 @@
 			font-size: 20px;
 		}
 	}
-	/* .image-content img{
+	.image-content img{
 		filter: brightness(50%);
-		max-width: none;
-		width: -webkit-calc(100% + 50px);
-		width: calc(100% + 50px);
-	}  */
-	 /* .image-content img:hover{
-		width: -webkit-calc(100% +10px);
-		width: calc(100% + 10px);
-	} */
+	}  
+    .image-content img:hover{
+		filter: brightness(100%);
+	} 
 	.hr{
 		width: 55%;
 		background-color: #FC0000;
